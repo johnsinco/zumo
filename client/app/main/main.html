@@ -1,0 +1,30 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>ZUMO</h1>
+    <p class="lead">Celebrating the best of Strava doping</p>
+    <img src="assets/images/rocket.jpg" alt="I'm Yeoman">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="text-center">Sketchy KOMs</h3>
+      <ol class="col-md-12 col-lg-12 col-sm-12" ng-repeat="segment in segments">
+	      <li>
+              <img ng-repeat="i in getNumber(segment.dopeRank) track by $index" src="assets/images/syringe_icon.svg" class="pull-left" />
+              <a href="#" tooltip="{{segment.name}}">{{segment.name}} - {{segment.leader}}</a>
+          </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>
+        <a href="https://twitter.com/johnsinco">@johnsinco</a> |
+        <a href="http://www.strava.com/athletes/1658783">Strava</a>
+      </p>
+  </div>
+</footer>
